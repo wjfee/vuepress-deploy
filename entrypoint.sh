@@ -10,6 +10,7 @@ echo "npm version: $(npm -v)"
 
 # Build vuepress project
 echo "==> Start building \n $BUILD_SCRIPT"
+cd ${SOURCE_DIR}
 echo 'pwd'
 eval "$BUILD_SCRIPT"
 echo "Build success"
