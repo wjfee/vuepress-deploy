@@ -11,10 +11,14 @@ echo "npm version: $(npm -v)"
 # Build vuepress project
 echo "==> Start building \n $BUILD_SCRIPT"
 echo "source: ${SOURCE_DIR}"
-cd ${SOURCE_DIR}
-echo `pwd`
-eval "$BUILD_SCRIPT"
-echo "Build success"
+for i in ${SOURCE_DIR};
+do
+  cd "/github/workspace/$i"
+  echo `pwd`
+  eval "$BUILD_SCRIPT"
+  echo "${i}Build success"
+done
+
 
 # Change directory to the dest
 echo "==> Changing directory to '$BUILD_DIR' ..."
