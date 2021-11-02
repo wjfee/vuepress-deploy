@@ -14,7 +14,7 @@ echo "source: ${SOURCE_DIR}"
 echo "now in : `pwd`"
 for i in ${SOURCE_DIR};
 do
-  cd "/github/workspace/$i"
+  cd "${github.workspace}${i}"
   echo "start build in : `pwd`"
   eval "$BUILD_SCRIPT"
   echo "${i}Build success"
