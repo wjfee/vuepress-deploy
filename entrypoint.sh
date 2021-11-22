@@ -12,11 +12,12 @@ echo "npm version: $(npm -v)"
 echo "==> Start building \n $BUILD_SCRIPT"
 echo "source: ${SOURCE_DIR}"
 echo "now in : `pwd`"
-echo "github.workspace: ${github.workspace}"
+echo "github.workspace: GITHUB_WORKSPACE
+dir="${GITHUB_WORKSPACE}/"
 for i in ${SOURCE_DIR};
 do
   echo `ls`
-  cd ${github.workspace}${i}
+  cd ${dir}${i}
   echo "start build in : `pwd`"
   eval "$BUILD_SCRIPT"
   echo "${i} Build success"
