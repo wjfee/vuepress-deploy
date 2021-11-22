@@ -14,7 +14,7 @@ echo "source: ${SOURCE_DIR}"
 echo "now in : `pwd`"
 echo "github.workspace: ${GITHUB_WORKSPACE}"
 dir="${GITHUB_WORKSPACE}/"
-for i in ${SOURCE_DIR};
+for i in ${SOURCE_DIR}
 do
   echo `ls`
   cd ${dir}${i}
