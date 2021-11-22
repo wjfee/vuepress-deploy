@@ -21,6 +21,8 @@ do
   echo "start build in : `pwd`"
   eval "$BUILD_SCRIPT"
   echo "${i} Build success"
+  echo `pwd`
+  echo `ls ${GITHUB_WORKSPACE}`
 done
 
 
